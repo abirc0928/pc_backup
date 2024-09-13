@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="activity">Take a class</h1>
+    <h3>Learn from: <a id="explore_link" href="">Visit this place</a></h3>
+    <script>
+        fetch('https://www.boredapi.com/api/activity/')
+        .then(res => res.json())
+        .then(date => {
+            document.getElementById('activity').innerText = date.activity
+            console.log(date)
+        })
+    </script>
+</body>
+</html>

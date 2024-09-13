@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+</head>
+<body>
+    <h1 onmousemove="handelClick1()" id="heading1">Mouse move</h1>
+    <h1 onmouseout="handelClick2()" id="heading2">Mouse out</h1>
+    <button onclick="handelClick3()" id="heading3">Click me</button>
+
+    <script>
+        function handelClick1(){
+            console.log('Someone clicked me')
+            var h = document.getElementById('heading1')
+            h.style.fontSize = '50px'
+            h.style.backgroundColor = 'tomato'
+            h.style.color = 'blue'
+        }
+        function handelClick2(){
+            console.log('Someone clicked me')
+            var h = document.getElementById('heading2')
+            h.style.fontSize = '50px'
+            h.style.backgroundColor = 'tomato'
+            h.style.color = 'blue'
+        }
+        function handelClick3(){
+            console.log('Someone clicked me')
+            var h = document.getElementById('heading3')
+            h.style.fontSize = '50px'
+            h.style.backgroundColor = 'tomato'
+            h.style.color = 'blue'
+        }
+    </script>
+</body>
+</html>

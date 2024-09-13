@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Shopping Cart</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+   <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+   <section>
+      <div class="container">
+         <div class="cart">
+            <div class="col-md-12 col-lg-10 mx-auto">
+               <div class="cart-item">
+                  <div class="row">
+                     <div class="col-md-7 center-item">
+                        <img src="images/product-1.png" alt="">
+                        <h5>iPhone 11 128GB Black</h5>
+                        <h4>$1219</h4>
+                     </div>
+
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+                           <button id="removeItem1" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="item1" type="text" class="form-control text-center" value="0">
+                           <button id="addItem1" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <h5>$<span id="price1">0</span></h5>
+                        <img id="remove1" src="images/remove.png" alt="" class="remove-item">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="cart-item">
+                  <div class="row">
+                     <div class="col-md-7 center-item mx-auto">
+                        <img src="images/product-2.png" alt="">
+                        <h5>iPhone 11 Silicone Case - Black</h5>
+                        <h4>$59</h4>
+                     </div>
+                     <div class="col-md-5 center-item">
+                        <div class="input-group number-spinner">
+                           <button id="removeItem2" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="item2" type="text" class="form-control text-center" value="0">
+                           <button id="addItem2"  class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                        </div>
+                        <h5>$<span id="price2">0</span></h5>
+                        <img id="remove2" src="images/remove.png" alt="" class="remove-item">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="cart-item">
+                  <div class="row">
+
+                     <div class="col-md-8">
+                        <h5>Subtotal: </h5>
+                        <h5>Tax (7%):</h5>
+                        <h5>Total:</h5>
+                     </div>
+
+                     <div class="col-md-4 status">
+                        <h5>$<span id="subTotal">0</span></h5>
+                        <h5>$<span id="tax">0</span></h5>
+                        <h5>$<span id="total">0</span></h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 pt-4 pb-4">
+                  <button id="checkOut" type="button" class="btn btn-success check-out">Check Out</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <script>
+      const addItem1 = document.getElementById('addItem1');
+      addItem1.addEventListener('click', function (event) {
+         addItems('item1','price1', 1219);
+      })
+
+      const removeItem1 = document.getElementById('removeItem1');
+      removeItem1.addEventListener('click', function (event) {
+         removeItems('item1' ,'price1',1219);
+      })
+
+      const addItem2 = document.getElementById('addItem2');
+      addItem2.addEventListener('click', function (event) {    
+         addItems('item2' ,'price2',59);      
+      })
+
+      const removeItem2 = document.getElementById('removeItem2');
+      removeItem2.addEventListener('click', function (event) {
+         removeItems('item2' ,'price2',59);
+      })
+
+      function addItems(id, price, priceValue) {
+         const item = document.getElementById(id).value;
+         var itemNumber = parseInt(item);
+         itemNumber = itemNumber + 1;
+         document.getElementById(id).value = itemNumber;
+         
+         updatePrice(price,itemNumber,priceValue)
+         totalPrice()
+      }
+
+      function removeItems(id, price, priceValue) {
+         const item = document.getElementById(id).value;
+         var itemNumber = parseInt(item);
+         if (itemNumber > 0) {
+            itemNumber = itemNumber - 1;
+            document.getElementById(id).value = itemNumber;
+
+            updatePrice(price,itemNumber,priceValue)
+            totalPrice()
+         }
+
+      }
+
+      function updatePrice(location, itemNumber, price){
+         var totalPrice = itemNumber * price;
+         document.getElementById(location).innerText = totalPrice;
+      }
+
+      function totalPrice(){
+         const totalPrice1 = parseInt(document.getElementById('price1').innerText )
+         const totalPrice2 = parseInt(document.getElementById('price2').innerText)
+
+         const withoutTax = totalPrice1 + totalPrice2;
+         const taxPrice = withoutTax * 0.07;
+
+         const addTax  = withoutTax + taxPrice;
+
+         document.getElementById('subTotal').innerText = withoutTax.toLocaleString('en-US');
+         document.getElementById('tax').innerText = taxPrice.toLocaleString('en-US');
+         document.getElementById('total').innerText = addTax.toLocaleString('en-US');
+      }
+      
+      const checkOut =  document.getElementById('checkOut');
+      checkOut.addEventListener('click',function(){
+         location.reload();
+      })
+
+      const remove1 =  document.getElementById('remove1');
+      remove1.addEventListener('click',function(){
+         removeAll('item1','price1');
+      })
+
+      const remove2 =  document.getElementById('remove2');
+      remove2.addEventListener('click',function(){
+         removeAll('item2','price2');
+      })
+
+      function removeAll(item,price){
+         document.getElementById(item).value = 0;
+         document.getElementById(price).innerText = 0;
+         totalPrice()
+      }
+
+   </script>
+</body>
+
+</html>

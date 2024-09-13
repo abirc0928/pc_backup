@@ -1,0 +1,77 @@
+.container{
+    margin-bottom: 40px;
+}
+.logo-size{
+    height: 50px;
+}
+h1{
+    font-size: 45px;
+    font-weight: 600;
+}
+h2{
+    font-weight: 700;
+}
+h5{
+    color: orange;
+}
+.btn{
+    background: black;
+    color: white;
+    width: 150px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+}
+p{
+    font-size: 22px;
+}
+
+.carousel-bg{
+    background-image: url("img/bg-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 480px;
+}
+
+.card{
+    box-shadow: 2px 2px 20px lightgray;
+    border-radius: 10px;
+}
+
+.card .card-title{
+    font-size: 25px;
+    font-weight: 600;
+}
+.cat{
+    border-top: 8px solid orange;
+    width: 100px;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.catagories{
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+.cat-img{
+
+    padding: 80px;
+    height: 300px;
+    width: 300px;
+    box-shadow: 2px 2px 20px lightgray;
+}
+.cat-img-1{
+    border-radius: 5px 50px;
+}
+
+.cat-img-2{
+    border-radius: 50px 5px 50px 5px;
+    
+}
+.cat-img-3{
+    margin-top: 50px;
+    border-radius: 50px 5px 50px 5px;
+}

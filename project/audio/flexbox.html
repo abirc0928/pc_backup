@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fcontenner{
+            display: flex;
+            width: 100%;
+            height: 350px;
+            border: 5px solid gray;
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            /* justify-content: center; */
+            /* justify-content: flex-end; */
+            /* align-items: center; */
+            /* align-items: flex-end;
+            align-items: flex-start; */
+            flex-wrap: wrap;
+        }
+        .fbox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            width: 120px;
+            height: 120px;
+            background-color: aqua;
+            margin: 10px;
+            text-align: center;
+            
+        }
+        .item1{
+            order: 3;
+            flex-grow: 3; 
+            align-self: center;
+
+        }
+        .item2{
+            order: 4;
+            flex-grow: 2; 
+        }
+    </style>
+</head>
+<body>
+    <div class="fcontenner">
+        <div class="fbox item1">1</div>
+        <div class="fbox item2">2</div>
+        <div class="fbox item3">3</div>
+        <div class="fbox item4">4</div>
+    </div>
+</body>
+</html>

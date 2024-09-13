@@ -1,0 +1,56 @@
+body{
+    background-color: #E5E5E5;
+}
+.navbar{
+    background-color: #562EFF;
+}
+.navbar-brand{   
+    font-size: 22px;
+}
+.nav-img{
+    width: 40px;
+    height: 40px;
+   
+}
+
+.logo-img{
+    width: 35px;
+    height: 40px;
+}
+
+.nav-link{
+    margin-left: 25px;
+}
+
+.info{
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+
+}
+
+.info h3{
+    color: #562EFF;
+   
+}
+
+.player img{
+    height: 50px;
+    width: 50px;
+}
+
+/* .line{
+    border-bottom: 1px solid lightgray;
+    width: 1250px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+} */
+
+.card{
+    border: none;
+}
+.card img{
+    width: 180px;
+    height: 130px;
+}

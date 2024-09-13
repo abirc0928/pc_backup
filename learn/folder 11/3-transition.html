@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .photo-album{
+            display: flex;;
+            flex-wrap: wrap;
+             
+        }
+        .photo-frame{
+            width: 300px;
+            height: 205px ;
+            border: 10px solid goldenrod;
+            border-radius: 10px;
+            position: relative;
+            margin: 10px;
+            overflow: hidden;
+        }
+        .photo-frame .photo img{
+            width: 100%;
+            /* transition: all 0.5s ease; */
+            transition: transform 1s;
+        }
+        .photo-frame:hover .photo img{
+            transform: scale(1.2);
+            /* transform: rotate(30deg); */
+            transition: transform 1s;
+        }
+        .photo-detiles{
+          position: absolute;
+          width: 300px;
+          height: 210px ;
+          top: 0; 
+          color: rgb(213, 66, 66);
+          opacity: 0;
+          transition: all 1s ease;
+        }
+        .photo-frame:hover .photo-detiles{
+            opacity: 1;
+            transition: all 1s ease;
+            background-color: rgba(218, 165, 32, 0.4);  
+                   
+        }
+    </style>
+</head>
+<body>
+    <h1>My Photo book</h1>
+    <section class="photo-album">
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div><div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="img/tiger.jpg" alt="">
+            </div>
+            <div class="photo-detiles">
+                <h2>Royal Bengle Tiger</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In aspernatur ipsam nemo quia inventore a similique sint, totam tempora cupiditate.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

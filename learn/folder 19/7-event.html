@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Cleck me 0</button>
+    <button id="second">Cleck me 2</button>
+    <button id="third">Cleck me 3</button>
+    <button id="last">Cleck me 4</button>
+    <script>
+        // 1st way to event handler
+        function handelClick(){
+            document.body.style.backgroundColor = 'tomato';
+        }
+        const secondButton = document.getElementById("second");
+        secondButton.onclick = handelClick;
+
+        // second way to event handler
+        function handelClick2(){
+            document.body.style.backgroundColor = 'blue';
+        }
+        const thirdButton = document.getElementById("third");
+        thirdButton.addEventListener("click", handelClick2)
+        
+
+        // 3rs way to event handler
+        document.getElementById("last").addEventListener("click", function(){
+            document.body.style.backgroundColor = 'cyan'; 
+        })
+    
+    </script>
+</body>
+</html>

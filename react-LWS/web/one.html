@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <label for="">Enter Number:</label>
+        <input id='number' oninput="addDigits()" type="text"><br>
+        <br>
+        <label for="">Sum:</label>
+        <input id="sum" type="text">
+        <br>
+        <br>
+        <br>
+        <!-- ==================================== -->
+        <input id="r" name='r' type="radio" value="Abir">A
+        <input id="r" name='r' type="radio" value="Bappy">B
+        <input id="r" name='r' type="radio" value="Cagol">c
+        <input type="submit" onclick="radio()">
+
+
+    </div>
+    <script>
+        function addDigits() {
+            const inputValue = document.getElementById('number').value;
+            const result = document.getElementById('sum');
+
+            let sum = 0;
+
+            for (let i = 0; i < inputValue.length; i++) {
+                sum += parseInt(inputValue[i]);
+            }
+
+
+            result.value = sum
+        }
+        // ===============================
+        function radio() {
+            // let inputValue = document.getElementById('r').value;
+            // console.log(inputValue)
+            let inputValue = document.getElementsByName('r');
+
+            let selectedValue = "";
+            for (let i = 0; i < inputValue.length; i++) {
+                if (inputValue[i].checked) {
+                    selectedValue = inputValue[i].value;
+                    break;
+                }
+            }
+
+            // Print the selected value to the console
+            console.log("Selected value: " + selectedValue);
+            
+        }
+    </script>
+</body>
+
+</html>

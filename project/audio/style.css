@@ -1,0 +1,7 @@
+.overflow{
+    height: 300px;
+    width: 300px;
+    border: 5px solid;
+    overflow: scroll ;
+    overflow-x: auto;
+}

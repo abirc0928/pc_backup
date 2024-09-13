@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: black;
+}
+
+.navbar-brand:hover {
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+
+.nav-link {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: black;
+    font-family: 'Rubik', sans-serif;
+}
+
+.search {
+    height: 40px;
+    width: 80%;
+    border-radius: 60px;
+    outline: none;
+    margin-right: -35px;
+    font-family: 'Rubik', sans-serif;
+    border: 2px solid rgb(248, 26, 92);
+}
+
+.btn0 {
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background-color: rgb(248, 26, 92);
+    border-radius: 60px;
+    color: white;
+    font-weight: 700;
+}
+
+.main {
+    background: url(./img/img9.jpg)no-repeat;
+    background-size: cover;
+    height: 85vh;
+    background-position: 50% 50%;
+    width: 100%;
+}
+
+.main h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.btn1 {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26, 92);
+
+    border-radius: 60px;
+    color: white;
+    font-weight: 700;
+
+}
+
+.btn1:hover {
+    background-color: rgb(227, 101, 101);
+    transition: 0.5s;
+}
+
+.text1 {
+    margin-top: 150px;
+    margin-left: 0px;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.card:hover {
+    box-shadow: 0px 2px 36px 4px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: 0px 2px 36px 4px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 0px 2px 36px 4px rgba(0, 0, 0, 0.62);
+    transition: 0.5s;
+}
